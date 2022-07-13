@@ -74,6 +74,8 @@ const Home = () => {
           const restaurantInfoResposne = await dispatch(
             fetchAppConfig(router.query.qrId)
           );
+          console.log("menuResponse: ", menuResponse);
+          console.log("restaurantInfoResposne: ", restaurantInfoResposne);
           if (menuResponse.status) {
             setMenu(menuResponse.jsonData.menu);
             setRecommendedItems(
@@ -107,6 +109,8 @@ const Home = () => {
             const restaurantInfoResposne = await dispatch(
               fetchAppConfig(qrInfo.qrId)
             );
+            console.log("menuResponse: ", menuResponse);
+            console.log("restaurantInfoResposne: ", restaurantInfoResposne);
             if (menuResponse.status) {
               setMenu(menuResponse.jsonData.menu);
               setRecommendedItems(

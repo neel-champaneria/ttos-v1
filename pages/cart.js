@@ -73,6 +73,8 @@ const CartPage = () => {
         const restaurantInfoResposne = await dispatch(
           fetchAppConfig(qrInfo.qrId)
         );
+        console.log("menuResponse: ", menuResponse);
+        console.log("restaurantInfoResposne: ", restaurantInfoResposne);
         if (!menuResponse.status) {
           if (menuResponse?.error?.qrExpire) {
             router.replace("/qr-expired");
