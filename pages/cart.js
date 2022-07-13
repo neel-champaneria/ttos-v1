@@ -77,15 +77,19 @@ const CartPage = () => {
         console.log("restaurantInfoResposne: ", restaurantInfoResposne);
         if (!menuResponse.status) {
           if (menuResponse?.error?.qrExpire) {
+            console.log("menu response: qrExpired");
             router.replace("/qr-expired");
           } else {
+            console.log("menu response: something-wrong");
             router.replace("/something-wrong");
           }
         }
         if (!restaurantInfoResposne.status) {
           if (restaurantInfoResposne?.error?.qrExpire) {
+            console.log("restaurant info response: qrExpired");
             router.replace("/qr-expired");
           } else {
+            console.log("restaurant info response: something-wrong");
             router.replace("/something-wrong");
           }
         }

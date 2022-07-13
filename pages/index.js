@@ -86,8 +86,10 @@ const Home = () => {
             setResturantProfile(menuResponse.jsonData.restaurant);
           } else {
             if (menuResponse?.error?.qrExpire) {
+              console.log("menu response: qrExpired");
               router.replace("/qr-expired");
             } else {
+              console.log("menu response: something-wrong");
               router.replace("/something-wrong");
             }
           }
@@ -95,8 +97,10 @@ const Home = () => {
             setRestaurantInfo(restaurantInfoResposne.jsonData);
           } else {
             if (restaurantInfoResposne?.error?.qrExpire) {
+              console.log("restaurant info response: qrExpired");
               router.replace("/qr-expired");
             } else {
+              console.log("restaurant info response: something-wrong");
               router.replace("/something-wrong");
             }
           }
@@ -121,8 +125,10 @@ const Home = () => {
               setResturantProfile(menuResponse.jsonData.restaurant);
             } else {
               if (menuResponse?.error?.qrExpire) {
+                console.log("menu response: qrExpired");
                 router.replace("/qr-expired");
               } else {
+                console.log("menu response: something-wrong");
                 router.replace("/something-wrong");
               }
             }
@@ -130,8 +136,10 @@ const Home = () => {
               setRestaurantInfo(restaurantInfoResposne.jsonData);
             } else {
               if (restaurantInfoResposne?.error?.qrExpire) {
+                console.log("restaurant info response: qrExpired");
                 router.replace("/qr-expired");
               } else {
+                console.log("restaurant info response: something-wrong");
                 router.replace("/something-wrong");
               }
             }
